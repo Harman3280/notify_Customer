@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "d8b9cb0c-4cdc-4ad0-bf55-c3380e6830cc",
+		"name": "NotifyMe_MS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddToInventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": \"80000\",\r\n    \"title\": \"Samsung\",\r\n    \"specification\": \"128GB RAM , White Color\",\r\n    \"quantity\": \"200\",\r\n    \"productType\": {\r\n        \"productType\": \"Electronics\",\r\n        \"productCategory\": \"Mobile\"\r\n    },\r\n    \"tags\": [\"Electronics\", \"Mobile\", \"Smartphone\", \"Android\"],\r\n    \"isActive\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productInventory/v1/addToInventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productInventory",
+						"v1",
+						"addToInventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotifyMe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"yogesh@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/productInventory/v1/notifyMe/{productId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productInventory",
+						"v1",
+						"notifyMe",
+						"{productId}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
